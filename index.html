@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> O JOGO COMEÇOU</title>
+    <link rel="shortcut icon" href="/forca/imagens/game.png" type="image/x-icon">
+    <link rel="stylesheet" href="/forca/css/style.css">
+    <link rel="stylesheet" href="/forca/css/style_inicio.css">
+    
+</head>
+ 	
+  <body> 
+    
+         <div>
+              <!--Tela principal-->
+                <div id="container">
+                  
+                   <!--Entrada Palavra Misteriosa-->
+                        <div class="containe-item entrada-palavra" >
+                           <div class="entrada-palavra-item">
+                              <input id="entrada" type="text" maxlength="14" >
+                              <button id="confirmar" type="button">Desafiar</button>
+                           </div>    
+                        </div>
+                        
+                    
+                   <!--Entrada Letra para ser verificada-->
+                        <div class="containe-item entrada-letra">                         
+                          <input id="conferir"  type="text" maxlength="1" autofocus>
+                          <button id="verificar" type="button" >Verificar</button>                     
+                        </div>	
+                      
+                    
+                    <!--Letra verificada e aplicada na posição da palavra misteriosa-->
+                        <div id="resposta"></div>
+
+                </div>
+
+              <!--Vidas restantes - forca e boneco-->
+                <div id="jogo">
+
+                    <!--Etrutura da Forca-->
+                      <svg class="forca" style="display: inline-block;">
+                          <line x1="100" y1="0" x2="70" y2="0"  class="forcaFixo "/>
+                          <line  x1="60" y1="5" x2="60" y2="700"  class="forcaFixo "/> 
+
+                          <line x1="180" y1="0" x2="70" y2="0"  class="forcaFixo "/>
+                          <line  x1="180" y1="5" x2="179" y2="70"  class="forcaFixo "/> 
+                      </svg>
+
+                      <svg class="boneco">
+
+                        <!--Cabeça-->
+                          <circle cx="40" cy="40" r="30" class="corpo cabeca  "/>
+
+                        <!--Tronco-->
+                          <line  x1="155" y1="90" x2="155" y2="150"  class="corpo tronco "/>
+                        
+                          <!--Braços-->
+                          <line x1="155" y1="5" x2="110" y2="40"  class="corpo bracosEsq "/>
+                          <line  x1="160" y1="5" x2="207" y2="40"  class="corpo bracosDir "/> 
+
+                      <!--Pernas-->
+                          <line x1="110" y1="270" x2="135" y2="200"  class="corpo pernasEsq "/>
+                          <line  x1="205" y2="270" x2="235" y1="200" class="corpo pernasDir "/>
+
+                      </svg>
+
+                </div>
+
+                <div class="vitoria" id="vitoria">
+                    <div class="vitoria-item">
+                        <h1>VOCÊ GANHOU !!</h1>
+                        <img src="/forca/imagens/giphy.gif" alt="vitoria"> 
+                        <p>
+                          <button type="button" class="btn" onclick="inicio()">inicio</button>
+                          <button type="button" class="btn" onclick="jogo()">jogar novamente</button>
+                        </p>
+                    </div>
+                </div>
+         </div>
+      
+  </body>
+
+  <script src="/forca/js/forca.js"></script>
+</html>

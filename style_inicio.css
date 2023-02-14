@@ -1,0 +1,82 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+:root{
+    --corPadrao: #2f2f2f;
+    --cores:#f90137;
+}
+
+body{
+    background: rgba(0,0,0, 0.2)
+}
+
+#container_inicio{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+
+    margin: 20vh auto;
+    width: 50em;
+    height: 26em;
+   
+    
+     overflow: hidden;
+     box-shadow: 30px 30px 30px -10px rgba(0,0,0, 0.15),
+                inset 10px 7.5px 10px rgba(2525,255,255, 0.75),
+                inset -5px -7px 10px rgba(2525,255,255, 0.75),
+                -15px -15px 35px rgba(255,255,255, 0.55),
+                 inset -1px -1px 10px rgba(0,0,0, 0.2),
+                 inset -1px -1px 10px rgba(0,0,0, 0.2);
+    z-index: 10;
+}
+
+.item{
+    display: flex;
+    margin: 25px auto;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: inherit;
+    height: auto;
+}
+
+.item h1{
+    margin: 50px 0 0 50px;
+    text-transform: uppercase;
+    font-size: 100px;
+    letter-spacing: -1px;
+    line-height: 85px;
+}
+
+.item p{
+    font-size: 30px;
+    line-height: 100px;
+    color: #2f2f2f;
+}
+
+.item button{
+padding: 10px 20px;
+
+    text-transform: uppercase;
+    font-weight: bold;
+    text-align: center;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 30px 30px 30px -10px rgba(0,0,0, 0.15),
+                inset 15px 15px 10px rgba(155, 155, 155, 0.432),
+                inset -15px -5px 10px rgba(155, 155, 155, 0.432),
+                -15px -15px 35px rgba(255,255,255, 0.55),
+                 inset -1px -1px 10px rgba(28, 119, 231, 0.2),
+                 inset -1px -1px 10px rgba(112, 12, 243, 0.234);
+
+}
+
+@font-face{
+    font-family: 'fonte-animada';
+    src: url(/forca/fonts/GROBOLD.ttf);
+}
